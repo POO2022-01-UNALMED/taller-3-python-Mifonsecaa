@@ -62,7 +62,7 @@ class TV:
 
     def canalUp(self):
         if self._estado == True:
-            if self.canal < 120:
+            if self._canal < 120:
                 self._canal +=1 
 
 
