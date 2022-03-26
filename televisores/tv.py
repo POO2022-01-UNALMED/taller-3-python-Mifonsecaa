@@ -7,7 +7,9 @@ class TV:
         self._canal = 1
         self._volumen = 1
         self._precio = 500
+        self._control = None
         TV._numTV += 1
+
         
     def setCanal(self, numero):
         if self._estado == True:
@@ -43,8 +45,8 @@ class TV:
         return self._control
 
     @classmethod
-    def setNumTV(cls):
-        TV.numTV 
+    def setNumTV(cls, numTV):
+        cls._numTV = numTV 
         
     @classmethod
     def getNumTV(cls):
