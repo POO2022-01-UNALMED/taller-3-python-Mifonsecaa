@@ -10,13 +10,16 @@ class TV:
         TV._numTV += 1
         
     def setCanal(self, numero):
-        self._canal = self._canal + numero
-    
-    def getCanal(self,):
+        if self._estado == True:
+            if numero >= 1 and numero <= 120:
+                self._canal = numero
+
+    def getCanal(self):
         return self._canal
     
     def setVolumen(self,numero):
-        self._volumen = numero
+        if self._estado == True and numero >= 0 and numero <= 7:
+            self._volumen = numero
     
     def getVolumen(self):
         return self._canal
@@ -47,40 +50,36 @@ class TV:
     def getNumTV(cls):
         return cls._numTV
 
-    def turnON(self, encendido):
-        if self._estado == False:
-            if encendido == True:
-                self._estado = encendido
+    def turnON(self):
+        self._estado = True
     
-    def turnOff(self, apagar):
-        if self._estado == True:
-            if apagar == True:
-                self._estado == False
+    def turnOff(self):
+        self._estado = False
 
     def getEstado(self):
         return self._estado
 
 
-    def canalUp(self, pasar):
+    def canalUp(self):
         if self._estado == True:
-            if (self._canal + pasar) >= 1 and (self.canal + pasar) <= 120:
-                return self._canal
+            if self._canal >= 1 and self.canal <= 120:
+                self._canal +=1 
 
 
-    def canalDown(self,bajar):
+    def canalDown(self):
         if self._estado == True:
-            if (self._canal - bajar) >= 1 or (self.canal - bajar) <= 120:
-                return self._canal
+            if self._canal >= 1 or self.canal  <= 120:
+                self._canal -= 1
 
-    def volumenUp(self, subirvol):
+    def volumenUp(self):
         if self._estado == True:
-            if (self._volumen + subirvol) >= 0 or (self._volumen + subirvol):
-                return self._volumen 
+            if self._volumen  >= 0 or self._volumen <= 7 :
+                self._volumen += 1
     
-    def volumenDown(self, bajarvol):
+    def volumenDown(self):
         if self._estado == True:
-            if (self._volumen - bajarvol) >= 0 or (self._volumen + bajarvol):
-                return self._volumen
+            if self._volumen >= 0 or self._volumen <= 7:
+                self._volumen -= 1
 
 
 
