@@ -45,3 +45,4 @@ def testValoresDefecto():
     if(tv1.getPrecio() == 500 and tv1.getCanal() == 1 and tv1.getVolumen() == 1):
         ok = True
     assert(ok)
+print(TV.setNumTV())
