@@ -41,11 +41,10 @@ class TV:
 
     
     def setNumTV(self):
-        if type(self) == TV:
-            TV._numTV += 1 
+        TV._numTV += 1 
 
     def getNumTV(self):
-        return self._numTV
+        return TV._numTV
 
     def turnON(self, encendido):
         if self._estado == False:
