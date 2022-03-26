@@ -9,13 +9,13 @@ class TV:
         self._marca = marca
         self._estado = estado 
         
-    def setCanal(self,numero):
-        self._canal = numero
+    def setCanal(self, numero):
+        self._canal = self._canal + numero
     
-    def getCanal(self):
+    def getCanal(self,):
         return self._canal
     
-    def setVolumen(self, numero):
+    def setVolumen(self,numero):
         self._volumen = numero
     
     def getVolumen(self):
