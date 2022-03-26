@@ -4,11 +4,11 @@ class TV:
     _volumen = 1
     _precio = 500
     _numTV = 0
-    def __init__(self,marca,estado,control):
+    _control = None
+    def __init__(self,marca,estado):
         self._marca = marca
         self._estado = estado 
-        self._control = control
-
+        
     def setCanal(self,numero):
         self._canal = numero
     
