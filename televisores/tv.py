@@ -40,11 +40,9 @@ class TV:
         return self._control
 
     
-    def setNumTV(self, cuenta):
-        if type(cuenta) == TV:
-            self._numTV +=1
-        else:
-            self._numTV 
+    def setNumTV(self):
+        if type(self) == TV:
+            TV._numTV += 1 
 
     def getNumTV(self):
         return self._numTV
