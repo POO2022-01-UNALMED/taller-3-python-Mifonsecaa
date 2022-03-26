@@ -41,9 +41,10 @@ class TV:
 
     
     def setNumTV(self):
-        TV._numTV += 1 
+        self._numTV 
+        
 
-    def getNumTV(self):
+    def getNumTV():
         return TV._numTV
 
     def turnON(self, encendido):
