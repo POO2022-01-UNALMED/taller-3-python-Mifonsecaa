@@ -1,5 +1,6 @@
 from televisores.tv import TV
 
+
 class Control:
     _tv = None
     def __init__(self):
@@ -30,8 +31,8 @@ class Control:
         self.settv = televisor
         TV.setControl = self.settv
 
-    def settv(self, televisor):
+    def setTv(self, televisor):
         self._tv = televisor
     
-    def gettv(self):
+    def getTv(self):
         return self._tv
