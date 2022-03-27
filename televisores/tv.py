@@ -23,7 +23,7 @@ class TV:
             self._volumen = volumen
     
     def getVolumen(self):
-        return self._canal
+        return self._volumen
 
     def setPrecio(self, valor):
         self._precio = valor
