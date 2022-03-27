@@ -27,6 +27,8 @@ def testMetodoCanal():
         ok = True
     assert(ok)
 
+    print(tv1.getCanal())
+
 
 def testMetodoVolumen():
 
